@@ -133,4 +133,7 @@ the culprit, but I don't know which ones.
 
 ## Outside Resources Used
 
+http://stackoverflow.com/questions/32984859/delete-confirmation-in-laravel
+http://stackoverflow.com/questions/28852694/bootstrap-modal-for-delete-confirmation-mvc
+
 ## Known Problems, Issues, And/Or Errors in the Program

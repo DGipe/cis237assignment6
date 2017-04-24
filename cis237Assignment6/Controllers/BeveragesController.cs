@@ -61,7 +61,7 @@ namespace cis237Assignment6.Controllers
                 }
                 else
 
-                    //Need to add an Error message of some sort
+                    ViewBag.Error = "An item with that ID already exists!";
                     return View(beverage);
             }
 
@@ -129,6 +129,8 @@ namespace cis237Assignment6.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
+            
+
             Beverage beverage = db.Beverages.Find(id);
             db.Beverages.Remove(beverage);
             db.SaveChanges();
