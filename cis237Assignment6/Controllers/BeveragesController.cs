@@ -10,6 +10,7 @@ using cis237Assignment6.Models;
 
 namespace cis237Assignment6.Controllers
 {
+    [Authorize]
     public class BeveragesController : Controller
     {
         private BeverageDGipeEntities db = new BeverageDGipeEntities();
@@ -50,13 +51,32 @@ namespace cis237Assignment6.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Beverages.Add(beverage);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                bool search = Search(beverage);
+
+                if (search == true)
+                {
+                    db.Beverages.Add(beverage);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                else
+
+                    //Need to add an Error message of some sort
+                    return View(beverage);
             }
 
             return View(beverage);
         }
+
+        private bool Search(Beverage search)
+        {
+
+            if (db.Beverages.Find(search.id) == null)
+                return true;
+            else
+                return false;
+        }
+
 
         // GET: Beverages/Edit/5
         public ActionResult Edit(string id)
