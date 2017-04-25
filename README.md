@@ -131,9 +131,17 @@ the culprit, but I don't know which ones.
 | README                                  | 5      |
 | Total                                   | 100    |
 
+## Extra Credit Completed
+
+Delete conformation
+Table row click listener
+
 ## Outside Resources Used
 
 http://stackoverflow.com/questions/32984859/delete-confirmation-in-laravel
 http://stackoverflow.com/questions/28852694/bootstrap-modal-for-delete-confirmation-mvc
+http://stackoverflow.com/questions/1207939/adding-an-onclick-event-to-a-table-row
 
 ## Known Problems, Issues, And/Or Errors in the Program
+None
+
