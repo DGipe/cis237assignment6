@@ -35,7 +35,7 @@ namespace cis237Assignment6.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.AreEqual("Your Centralized Beverage Managment Resource", result.ViewBag.Message);
         }
 
         [TestMethod]
@@ -49,6 +49,43 @@ namespace cis237Assignment6.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
+        }
+
+        //Test Beverage Create Page
+        [TestClass]
+        public class BeveragesControllerTest
+        {
+            [TestMethod]
+            public void BeverageCreate()
+            {
+                // Arrange
+                BeveragesController controller = new BeveragesController();
+
+                // Act
+                ViewResult result = controller.Create() as ViewResult;
+
+                // Assert
+                // Assert.AreEqual("Beverage List", result.ViewBag.Title);
+                Assert.IsNotNull(result);
+            }
+        }
+
+        //Test add phone number page
+        [TestClass]
+        public class ManageControllerTest
+        {
+            [TestMethod]
+            public void AddPhoneNumber()
+            {
+                // Arrange
+                ManageController controller = new ManageController();
+
+                // Act
+                ViewResult result = controller.AddPhoneNumber() as ViewResult;
+
+                // Assert
+                Assert.IsNotNull(result);
+            }
         }
     }
 }
