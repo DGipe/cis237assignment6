@@ -143,9 +143,11 @@ the culprit, but I don't know which ones.
 http://stackoverflow.com/questions/32984859/delete-confirmation-in-laravel
 http://stackoverflow.com/questions/28852694/bootstrap-modal-for-delete-confirmation-mvc
 http://stackoverflow.com/questions/1207939/adding-an-onclick-event-to-a-table-row
+
 https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 
 
 ## Known Problems, Issues, And/Or Errors in the Program
+
 * Occasionally when you click a row to edit an item, it attempts to go to /Beverages/Beverages/Edit. This happens at random and is fixed by restarting program.
 * Sort by clicking headers cannot be completed on a filtered list. Clicking the sort will reload the entire list. 
